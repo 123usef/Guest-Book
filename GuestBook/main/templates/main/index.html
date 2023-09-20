@@ -1,0 +1,26 @@
+{% extends 'main/base.html' %}
+
+
+{% block content %}
+
+<div class="container my-3 ">
+    <div class="card bg-dark p-3">
+        <h3 class="card-title text-light"> joonguini Guest Book  </h3>
+<div class="card-body">
+    <a  class="btn btn-primary" href="{% url 'signin' %}"> got to sign in</a>
+</div>
+    </div>
+    {% comment %} {% if  %}{% endif %} {% endcomment %}
+   {% for c in comments %}
+   <h3> {{c.name}}</h3>
+   <div class="card bg-dark text-light">
+     <div class="card-body">
+
+
+         <p  class="card-text"> {{c.comment}}</p>
+
+     </div>
+   </div>
+    {% endfor %}
+</div>
+{% endblock content %}

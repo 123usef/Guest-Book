@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.min.css'  %}">
+    <title>Guest Book </title>
+</head>
+<body>
+    
+{% include 'main/componenets/navbar.html' %}
+     {% block content %}
+     
+     {% endblock%}
+
+    <h3>footer</h3>
+
+    <script src=" {% static 'main/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
